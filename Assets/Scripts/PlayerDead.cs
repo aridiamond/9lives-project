@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class PlayerDead : MonoBehaviour
 {
     [SerializeField] GameObject deadLight;
     public int lives;
+    public TextMeshProUGUI livesText;
 
     void Start()
     {
@@ -22,11 +24,19 @@ public class PlayerDead : MonoBehaviour
     }
     void Die()
     {
+        lives -= 1;
         if(lives > 0)
         {
-            lives -= 1;
             Instantiate(deadLight, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), Quaternion.identity);
             this.gameObject.transform.position = new Vector2(0, 0);
+            if (lives != 1)
+            {
+                livesText.text = (lives.ToString() + " lives");
+            }
+            else
+            {
+                livesText.text = (lives.ToString() + " life");
+            }
         }
         else
         {

@@ -2335,6 +2335,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3611818095639615040, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: livesText
+      value: 
+      objectReference: {fileID: 305803302}
+    - target: {fileID: 3611818095639615044, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615044, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_Size.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615044, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_Size.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615044, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611818095639615045, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2378,6 +2398,26 @@ PrefabInstance:
     - target: {fileID: 3611818095639615045, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615046, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615046, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615046, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615046, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.0732422
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611818095639615046, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6278191
       objectReference: {fileID: 0}
     - target: {fileID: 3611818095639615055, guid: c9a57e0531810d743b3a5df20691484b, type: 3}
       propertyPath: m_Name
@@ -2562,6 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
