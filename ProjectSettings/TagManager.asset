@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Goal
+  - DeadPlayer
   layers:
   - Default
   - TransparentFX

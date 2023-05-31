@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour
 {
-
-    void OnCollisionEnter2D(Collision2D other)
+    
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Goal"))
+        if (other.gameObject.CompareTag("Player"))
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

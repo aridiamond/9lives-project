@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 3611818095639615040}
   - component: {fileID: 3611818095639615046}
   - component: {fileID: 434310599333901686}
+  - component: {fileID: 9133617928882482430}
   m_Layer: 0
   m_Name: plyer
   m_TagString: Player
@@ -238,7 +239,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 7.5
-  jumpForce: 350
+  jumpForce: 400
 --- !u!114 &3611818095639615040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadLight: {fileID: 4692451601062776598, guid: ce16a524f62bca647b6108f3c15ebb95, type: 3}
   lives: 0
+  livesText: {fileID: 0}
 --- !u!61 &3611818095639615046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,3 +302,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9133617928882482430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611818095639615055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdddc410225bbe843ba00c32a436e5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

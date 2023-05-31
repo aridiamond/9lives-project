@@ -15,6 +15,13 @@ public class PlayerDead : MonoBehaviour
     {
         lives = 9;
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && lives > 1)
+        {
+            Die();
+        }
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.CompareTag("Obstacle"))
