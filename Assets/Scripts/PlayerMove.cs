@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D coll;
     private Animator anim;
+    enum MovementState { idle, running, jumping, falling }
     
     void Start()
     {
@@ -26,22 +27,40 @@ public class PlayerMove : MonoBehaviour
         {
             transform.Translate(Vector2.right * Time.deltaTime * speed * moveLR);
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
-            anim.SetBool("running", true);
         }
         if (moveLR < 0f && !isCollidingLeft())
         {
             transform.Translate(Vector2.right * Time.deltaTime * speed * moveLR);
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
-            anim.SetBool("running", true);
         }
         if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded())
         {
             rb.AddForce(Vector2.up * jumpForce);
         }
-        if (moveLR == 0f)
+        
+        UpdateAnimationState();
+    }
+    void UpdateAnimationState()
+    {
+        MovementState state;
+
+        if (moveLR != 0f && isGrounded())
         {
-            anim.SetBool("running", false);
+            state = MovementState.running;
         }
+        else
+        {
+            state = MovementState.idle;
+        }
+        if (rb.velocity.y > .1f)
+        {
+            state = MovementState.jumping;
+        }
+        else if (rb.velocity.y < -.1f)
+        {
+            state = MovementState.falling;
+        }        
+        anim.SetInteger("state", (int)state);
     }
     bool isGrounded()
     {
