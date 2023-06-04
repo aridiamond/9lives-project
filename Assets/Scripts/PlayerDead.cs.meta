@@ -3,7 +3,9 @@ guid: e0405c76586450c49ac33a0a19a2cac7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - deadLight: {fileID: 4692451601062776598, guid: ce16a524f62bca647b6108f3c15ebb95, type: 3}
+  - livesText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -11,6 +11,7 @@ public class LevelEnd : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
