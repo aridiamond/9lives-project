@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3433168129406354456}
   - component: {fileID: 3433168129406354457}
   - component: {fileID: 3433168129406354462}
-  - component: {fileID: 3433168129406354463}
+  - component: {fileID: 435635295525744396}
   m_Layer: 0
   m_Name: LvlEnd
   m_TagString: Goal
@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdddc410225bbe843ba00c32a436e5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &3433168129406354463
-PolygonCollider2D:
+  dialoguePanel: {fileID: 4588149808086314184, guid: ff6e61e79cf1ffb4fb1e95552a49eba6, type: 3}
+--- !u!61 &435635295525744396
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -121,11 +122,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+  m_EdgeRadius: 0

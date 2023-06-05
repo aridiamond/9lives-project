@@ -238,7 +238,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 7.5
-  jumpForce: 400
+  jumpForce: 500
 --- !u!114 &3611818095639615040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +254,8 @@ MonoBehaviour:
   deadLight: {fileID: 4692451601062776598, guid: ce16a524f62bca647b6108f3c15ebb95, type: 3}
   lives: 0
   livesText: {fileID: 0}
+  rend: {fileID: 3611818095639615044}
+  body: {fileID: 3611818095639615042}
 --- !u!61 &3611818095639615046
 BoxCollider2D:
   m_ObjectHideFlags: 0
