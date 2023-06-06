@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Follow: {fileID: 606757255}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1355,6 +1355,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4588149808086314231, guid: ff6e61e79cf1ffb4fb1e95552a49eba6, type: 3}
   m_PrefabInstance: {fileID: 1348666862}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1348666864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4588149808086314184, guid: ff6e61e79cf1ffb4fb1e95552a49eba6, type: 3}
+  m_PrefabInstance: {fileID: 1348666862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1386668787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1407,13 +1412,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3433168129406354457, guid: 3256ac2dfb54e0646b4fa0ab3e850c77, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433168129406354457, guid: 3256ac2dfb54e0646b4fa0ab3e850c77, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433168129406354457, guid: 3256ac2dfb54e0646b4fa0ab3e850c77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f9e421673733f014b9f98c6673e3cde9, type: 3}
+      objectReference: {fileID: 21300000, guid: 5afbae15744dd4aa9a7efdcf23af6c61, type: 3}
     - target: {fileID: 3433168129406354458, guid: 3256ac2dfb54e0646b4fa0ab3e850c77, type: 3}
       propertyPath: m_Name
       value: LvlEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 3433168129406354462, guid: 3256ac2dfb54e0646b4fa0ab3e850c77, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1348666864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3256ac2dfb54e0646b4fa0ab3e850c77, type: 3}
 --- !u!1 &1439363702
@@ -1680,7 +1697,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1844,6 +1861,18 @@ PrefabInstance:
     - target: {fileID: 2939634072027210037, guid: 7635c5c0356fc4048b1b3c9b867174d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939634072803634469, guid: 7635c5c0356fc4048b1b3c9b867174d7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939634072803634469, guid: 7635c5c0356fc4048b1b3c9b867174d7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49411768
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939634072803634469, guid: 7635c5c0356fc4048b1b3c9b867174d7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7294118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7635c5c0356fc4048b1b3c9b867174d7, type: 3}

@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour
     
     void Start()
     {
+        Cursor.visible = false;
         rb = gameObject.GetComponent<Rigidbody2D>();
         coll = gameObject.GetComponent<BoxCollider2D>();
         anim = gameObject.GetComponent<Animator>();

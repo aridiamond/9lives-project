@@ -8,6 +8,10 @@ public class MenuButtons : MonoBehaviour
     [SerializeField] GameObject mainPanel;
     [SerializeField] GameObject creditsPanel;
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
     public void GoToMain()
     {
         mainPanel.SetActive(true);

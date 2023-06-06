@@ -40,40 +40,35 @@ public class PlayerDead : MonoBehaviour
             StartCoroutine(Death());
         }
     }
-    void Die()
-    {
-        lives -= 1;
-        if(lives > 0)
-        {
-            Instantiate(deadLight, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y - .5f), Quaternion.identity);
-            this.gameObject.transform.position = new Vector2(GameObject.Find("StartPoint").transform.position.x, GameObject.Find("StartPoint").transform.position.y);
-            if (lives != 1)
-            {
-                livesText.text = (lives.ToString() + " lives");
-            }
-            else
-            {
-                livesText.text = (lives.ToString() + " life");
-            }
-        }
-        else
-        {
-            this.gameObject.transform.position = new Vector2(GameObject.Find("StartPoint").transform.position.x, 0);
-            GameObject[] deadPlayer = GameObject.FindGameObjectsWithTag("DeadPlayer");
-            foreach(GameObject dead in deadPlayer)
-            {
-                GameObject.Destroy(dead);
-            }
-        }
-    }
 
     IEnumerator Death()
     {
         dying = true;
         rend.enabled = false;
         body.constraints = RigidbodyConstraints2D.FreezeAll;
+        lives -= 1;
+        if(lives > 0)
+        {
+            Instantiate(deadLight, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y - .5f), Quaternion.identity);
+        }
+        else
+        {
+            GameObject[] deadPlayer = GameObject.FindGameObjectsWithTag("DeadPlayer");
+            foreach(GameObject dead in deadPlayer)
+            {
+                GameObject.Destroy(dead);
+            }
+        }
         yield return new WaitForSeconds(0.5f);
-        Die();
+        this.gameObject.transform.position = new Vector2(GameObject.Find("StartPoint").transform.position.x, 0);
+        if (lives != 1)
+        {
+            livesText.text = (lives.ToString() + " lives");
+        }
+        else
+        {
+            livesText.text = (lives.ToString() + " life");
+        }
         rend.enabled = true;
         body.constraints = RigidbodyConstraints2D.FreezeRotation;
         dying = false;

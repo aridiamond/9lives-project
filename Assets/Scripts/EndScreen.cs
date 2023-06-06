@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class EndScreen : MonoBehaviour
 {
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
     public void GoToMenu()
     {
         SceneManager.LoadScene(0);
